@@ -42,5 +42,4 @@ def responselist(request):
 def viewresponse(request):
     sender = request.POST.get('sender')
     r = Response.objects.get(id = sender)
-    print r
     return render(request, 'book/response.html', {"response": r})
