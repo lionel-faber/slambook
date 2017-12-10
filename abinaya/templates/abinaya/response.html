@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{ response.name }}'s Response</title>
+
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'book/css/style1.css' %}">
+
+
+</head>
+
+<body>
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet' type='text/css'>
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+  <div id="content">
+    <h1>Once upon a time</h1>
+
+    <form action="{% url 'agetresponses' %}" autocomplete="on">
+      <p>
+        <label for="username">Call me</label>
+        <input type="text" value="{{ response.name }}" readonly/>
+      </p>
+      <p>
+        <label for="username">Mail me at</label>
+        <input type="text" value="{{ response.email }}" readonly/>
+      </p>
+      <p>
+        <label for="username">Gimme a ring at</label>
+        <input type="text" value="{{ response.phone }}" readonly/>
+      </p>
+      <p>
+        <label for="username">The world became awesome on</label>
+        <input type="text" value="{{ response.dob }}" readonly/>
+      </p>
+      <p>
+        <label for="username">My Talents &amp; Hobbies</label>
+        <input type="text" value="{{ response.t_h }}" readonly/>
+      </p>
+      <p>
+        <label for="username">Food I'll never give up on</label>
+        <input type="text" value="{{ response.food }}" readonly/>
+      </p>
+      <p>
+        <label for="username">The song I sing in the shower</label>
+        <input type="text" value="{{ response.song }}" readonly/>
+      </p>
+      <p>
+        <label for="username">I dream of living in</label>
+        <input type="text" value="{{ response.fav_place }}" readonly/>
+      </p>
+      <p>
+        <label for="username">I dream of meetin</label>
+        <input type="text" value="{{ response.fav_person }}" readonly/>
+      </p>
+      <p>
+        <label for="username">I think this guy will end up in jail</label>
+        <input type="text" value="{{ response.jail }}" readonly/>
+      </p>
+      <p>
+        <label for="username">If I was invisible I'd do this</label>
+        <input type="text" value="{{ response.invisible }}" readonly/>
+      </p>
+      <p>
+        <label for="username">My most cherished memory in college</label>
+        <input type="text" value="{{ response.memory }}" readonly/>
+      </p>
+      <p>
+        <label for="username">I wish I had done this differently</label>
+        <input type="text" value="{{ response.wish }}" readonly/>
+      </p>
+      <p>
+        <label for="username">The best thing about you is</label>
+        <input type="text" value="{{ response.best_thing }}" readonly/>
+      </p>
+      <p>
+        <label for="username">The worst thing about you is</label>
+        <input type="text" value="{{ response.worst_thing }}" readonly/>
+      </p>
+      <p>
+        <label for="username">Out of 10 I'd give you a</label>
+        <input type="text" value="{{ response.rating }}" readonly/>
+      </p>
+      <p>
+        <label for="username">My advice to you is</label>
+        <input type="text" value="{{ response.advice }}" readonly/>
+      </p>
+
+      <input type="submit" value=" Back" />
+
+    </form>
+  </div>
+
+
+</body>
+
+</html>
