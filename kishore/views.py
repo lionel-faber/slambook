@@ -34,12 +34,12 @@ def submit(request):
     response.save()
     return render(request, 'kishore/thankyou.html')
 
-@login_required(login_url='/admin')
+@login_required(login_url="/accounts/login/")
 def responselist(request):
     responses = Response.objects.all()
     return render (request, 'kishore/responselist.html', {"responses": responses })
 
-@login_required(login_url='/admin')
+@login_required(login_url="/accounts/login/")
 def viewresponse(request):
     sender = request.POST.get('sender')
     r = Response.objects.get(id = sender)

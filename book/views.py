@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from book.models import *
 from django.http import HttpResponse
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 
 # Create your views here.
 def index(request):
@@ -33,12 +33,14 @@ def submit(request):
     response.save()
     return render(request, 'book/thankyou.html')
 
-@login_required(login_url='/admin')
+@login_required(login_url="/accounts/login/")
+@user_passes_test(lambda u: u.is_superuser)
 def responselist(request):
     responses = Response.objects.all()
     return render (request, 'book/responselist.html', {"responses": responses })
 
-@login_required(login_url='/admin')
+@login_required(login_url="/accounts/login/")
+@user_passes_test(lambda u: u.is_superuser)
 def viewresponse(request):
     sender = request.POST.get('sender')
     r = Response.objects.get(id = sender)
