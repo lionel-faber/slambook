@@ -21,71 +21,27 @@
     <form action="{% url 'agetresponses' %}" autocomplete="on">
       <p>
         <label for="username">Call me</label>
-        <input type="text" value="{{ response.name }}" readonly/>
+        <textarea cols="40" rows="5" type="text" readonly>{{ response.name }}</textarea>
       </p>
       <p>
         <label for="username">Mail me at</label>
-        <input type="text" value="{{ response.email }}" readonly/>
+        <textarea cols="40" rows="5" type="text" readonly>{{ response.email }}"</textarea>
       </p>
       <p>
         <label for="username">Gimme a ring at</label>
-        <input type="text" value="{{ response.phone }}" readonly/>
+        <textarea cols="40" rows="5" type="text" readonly>{{ response.phone }}"</textarea>
       </p>
       <p>
         <label for="username">The world became awesome on</label>
-        <input type="text" value="{{ response.dob }}" readonly/>
+        <textarea cols="40" rows="5" type="text" readonly>{{ response.dob }}"</textarea>
       </p>
       <p>
-        <label for="username">My Talents &amp; Hobbies</label>
-        <input type="text" value="{{ response.t_h }}" readonly/>
+        <label for="username">Something I'd like to share with you</label>
+        <textarea cols="40" rows="5" type="text" readonly>{{ response.sharing }}"</textarea>
       </p>
       <p>
-        <label for="username">Food I'll never give up on</label>
-        <input type="text" value="{{ response.food }}" readonly/>
-      </p>
-      <p>
-        <label for="username">The song I sing in the shower</label>
-        <input type="text" value="{{ response.song }}" readonly/>
-      </p>
-      <p>
-        <label for="username">I dream of living in</label>
-        <input type="text" value="{{ response.fav_place }}" readonly/>
-      </p>
-      <p>
-        <label for="username">I dream of meetin</label>
-        <input type="text" value="{{ response.fav_person }}" readonly/>
-      </p>
-      <p>
-        <label for="username">I think this guy will end up in jail</label>
-        <input type="text" value="{{ response.jail }}" readonly/>
-      </p>
-      <p>
-        <label for="username">If I was invisible I'd do this</label>
-        <input type="text" value="{{ response.invisible }}" readonly/>
-      </p>
-      <p>
-        <label for="username">My most cherished memory in college</label>
-        <input type="text" value="{{ response.memory }}" readonly/>
-      </p>
-      <p>
-        <label for="username">I wish I had done this differently</label>
-        <input type="text" value="{{ response.wish }}" readonly/>
-      </p>
-      <p>
-        <label for="username">The best thing about you is</label>
-        <input type="text" value="{{ response.best_thing }}" readonly/>
-      </p>
-      <p>
-        <label for="username">The worst thing about you is</label>
-        <input type="text" value="{{ response.worst_thing }}" readonly/>
-      </p>
-      <p>
-        <label for="username">Out of 10 I'd give you a</label>
-        <input type="text" value="{{ response.rating }}" readonly/>
-      </p>
-      <p>
-        <label for="username">My advice to you is</label>
-        <input type="text" value="{{ response.advice }}" readonly/>
+        <label for="username">Some suggestions for you</label>
+        <textarea cols="40" rows="5" type="text" readonly>{{ response.suggestions }}"</textarea>
       </p>
 
       <input type="submit" value=" Back" />
